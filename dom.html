@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+ <pre>
+        Q.1 Write the code to access element which is having id as "text"
+ans.1 var element = document.getElementById("text");
+
+Q.2 Write the code to access element which is having tag as "h1"
+ans.2document.querySelector("h1")
+
+Q.3 Write the code to access element which is having class as "box"
+ans.3 var element = document.getElementsByClassName("box")[0];
+
+Q.4 " <,h1>Hello <,/h1> Change the heading from ""Hello"" to ""Hello World"" using DOM functions"
+ans.4 const heading = document.querySelector('h1'); heading.innerHTML = "Hello World";
+
+Q.5 Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.
+ 
+        <.style> 
+        .flex-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin: auto;
+        }
+        .flex-container > div {
+          background-color: #f1f1f1;
+          width: 200px;
+          margin: 10px;
+          padding: 20px;
+          font-size: 30px;
+          font-family: sans-serif;
+          border: 1px solid black;
+          text-align: center;
+        }
+        
+        <.script>
+        function changeDirection() {
+          var flexContainer = document.getElementById("flexContainer");
+          if (flexContainer.style.flexDirection == "row") {
+            flexContainer.style.flexDirection = "column";
+          } else {
+            flexContainer.style.flexDirection = "row";
+          }
+        }
+        <./script>
+        <./head>
+        <.body>
+        
+        <.h1>Flex Direction Demo<./h1>
+        
+        
+Q.6 What’s the difference between window vs document?
+ans.6 The window object represents the browser window and is the top level object in the JavaScript hierarchy. It contains the browser’s address bar, history list, menus, and other browser-specific features. The document object is a child of the window object and represents the current web page displayed in the browser window. It contains the HTML document structure and all the elements of the page.
+
+Q.7 "<.h1>Hello Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"
+    ans.7 const heading = document.querySelector('h1');
+            heading.style.color = 'red';
+            heading.id = 'heading';
+Q.8 Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"
+ <.html>
+                <.body>
+                  <.h1>Hello World<./h1>
+                  <.button onclick="replaceText()">Replace Text<./button>
+              
+                  <.script>
+                    function replaceText() {
+                      document.body.innerHTML = 
+                        "<.h1>Welcome to Elevation Academy<./h1>";
+                    }
+                  <./script>
+                <./body>
+              <./html>
+Q.9 Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second
+ <.script>
+
+                / set up a function to show current time
+                function showTime(){
+                  / create a Date object
+                  let date = new Date();
+                  / extract hours, minutes, and seconds from the Date object
+                  let h = date.getHours(); // 0 - 23
+                  let m = date.getMinutes(); // 0 - 59
+                  let s = date.getSeconds(); // 0 - 59
+                  / format the time values
+                  h = (h < 10) ? "0" + h : h;
+                  m = (m < 10) ? "0" + m : m;
+                  s = (s < 10) ? "0" + s : s;
+                  / Put the formatted time values into a variable
+                  let time = h + ":" + m + ":" + s;
+                  / display the time
+                  document.getElementById("MyClockDisplay").innerText = time;
+                  document.getElementById("MyClockDisplay").textContent = time;
+                  / call the showTime function every second
+                  setTimeout(showTime, 1000);
+                }
+                / call the showTime function to display the current 
+Q.10 Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected
+23-24
+If the user selects 21-22, the output will be: 21-22
+Q.11 "Create a form having name ,email, phone no. , birth year Add validations - phone no. should start with 91 , it should be 10 digits email should be domain prepbytes.com birth year should be > 95"
+  
+
+            Name:
+            
+
+            
+            Email:
+            
+
+            
+            Phone No.:
+            
+
+            
+            Birth Year:
+    </pre>
+</body>
+</html>
